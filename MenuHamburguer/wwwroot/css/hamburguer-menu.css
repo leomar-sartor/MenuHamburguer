@@ -140,6 +140,42 @@ html {
             background-color: #35acdf;
         }
 
+        .sidebar-nav li:nth-child(10):before {
+            background-color: #ec1b5a;
+        }
+
+        .sidebar-nav li:nth-child(11):before {
+            background-color: #79aefe;
+        }
+
+        .sidebar-nav li:nth-child(12):before {
+            background-color: #314190;
+        }
+
+        .sidebar-nav li:nth-child(13):before {
+            background-color: #279636;
+        }
+
+        .sidebar-nav li:nth-child(14):before {
+            background-color: #7d5d81;
+        }
+
+        .sidebar-nav li:nth-child(15):before {
+            background-color: #ead24c;
+        }
+
+        .sidebar-nav li:nth-child(16):before {
+            background-color: #2d2366;
+        }
+
+        .sidebar-nav li:nth-child(17):before {
+            background-color: #35acdf;
+        }
+
+        .sidebar-nav li:nth-child(18):before {
+            background-color: #ec1b5a;
+        }
+
         .sidebar-nav li:hover:before,
         .sidebar-nav li.open:hover:before {
             width: 100%;
@@ -174,7 +210,7 @@ html {
     }
 
     .sidebar-nav .dropdown-menu {
-        position: relative;
+        position: sticky;
         width: 100%;
         padding: 0;
         margin: 0;
