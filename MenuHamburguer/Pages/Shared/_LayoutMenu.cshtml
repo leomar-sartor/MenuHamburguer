@@ -1,0 +1,104 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - MenuHamburguer</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="stylesheet" href="~/css/hamburguer-menu.css" />
+</head>
+<body>
+
+
+    <!-- EMPACOTADOR / INVÓLUCRO -->
+    <div id="wrapper">
+        
+        <!-- SOBREPOR -->
+        <div class="overlay"></div>
+
+        <!-- HAMBURGUER -->
+        <div id="page-content-wrapper">
+            <button type="button" class="hamburger is-closed" data-toggle="offcanvas">
+                <span class="hamb-top"></span>
+                <span class="hamb-middle"></span>
+                <span class="hamb-bottom"></span>
+            </button>
+        </div>
+        <!-- END HAMBURGUER -->
+
+
+        <!-- MENU -->
+        <!-- Sidebar -->
+        <nav id="sidebar-wrapper" class="navbar navbar-inverse navbar-fixed-top" role="navigation" style="padding: 0 !important; position: absolute !important;">
+
+            <div class="container">
+
+                <ul class="nav sidebar-nav">
+                    <li class="sidebar-brand" style="padding: 0 !important;">
+                        <a href="#">
+                           <a asp-area="" asp-controller="Home" asp-action="Index" class="navbar-brand" style="padding: 0px !important;">
+                                LOGOMARCA
+                            </a>
+                        </a>
+                    </li>
+                    <li>
+                        <a asp-area="" asp-controller="Helpers" asp-action="Upload">File Helper</a>
+                    </li>
+                    <li>
+                        <a asp-area="" asp-controller="Helpers" asp-action="ProgressBar">Progress Bar</a>
+                    </li>
+                    <li>
+                        <a asp-area="" asp-controller="Notification" asp-action="Notificacoes">Notificações</a>
+                    </li>
+                    <li>
+                        <a asp-area="" asp-controller="MegaSena" asp-action="Index">Mega-Sena</a>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Works <span class="caret"></span></a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li class="dropdown-header">Dropdown heading</li>
+                            <li><a href="#">Action</a></li>
+                            <li><a href="#">Another action</a></li>
+                            <li><a href="#">Something else here</a></li>
+                            <li><a href="#">Separated link</a></li>
+                            <li><a href="#">One more separated link</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">Services</a>
+                    </li>
+                    <li>
+                        <a asp-area="" asp-controller="Home" asp-action="Contact"> Contato </a>
+                    </li>
+                    <li>
+                        <a href="https://twitter.com/maridlcrmn">Follow me</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <!-- #sidebar-wrapper -->
+        <!-- END MENU -->
+    </div>
+    <!-- END EMPACOTADOR / INVÓLUCRO -->
+
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    @*<footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2022 - MenuHamburguer - <a asp-area="" asp-page="/Privacy">Privacy</a>
+        </div>
+    </footer>*@
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="~/js/hamburguer-menu.js" asp-append-version="true"></script>
+
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
